@@ -23,16 +23,3 @@ jobs:
 
       - name: Build Project
         run: npm run build
-
-      - name: Upload Build Artifacts
-        run: action/upload-artifacts@v3
-        with:
-          name: nextjs-build
-          path: .next
-
-deploy:
-    runs-on: ubuntu-latest
-    needs: build  # 確保建構成功後才進行部署
-    steps:
-      - name: Deploy to server
-        run: echo "Deploying application..."
