@@ -42,7 +42,8 @@ const Main = () => {
       dispatch(updateTodoContent({id:selectedTodo?.id, content:selectedTodo?.content}))
     }
     return (
-    <div className='dark'>
+    <div className='dark' id='main'>
+      <h1>Home</h1>
         <Input type='text' spellCheck={false} className="max-w-xs inline-block mb-4" placeholder='Type in your todo list' onChange={(e)=>handleChange(e)} onKeyDown={(e)=>{handleEnter(e)}} value={inputText}></Input>
         <button className=' rounded-full w-6 h-6 align-middle text-center mx-2 hover:-translate-y-1 active:translate-y-0 bg-slate-50 text-slate-900' onClick={handleAddTodo}>+</button>
         <Table aria-label="Example static collection table" className='dark'>
